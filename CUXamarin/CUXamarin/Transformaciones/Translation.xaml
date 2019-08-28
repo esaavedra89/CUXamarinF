@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CUXamarin.Transformaciones.Translation">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="20,10">
+            <Frame
+                x:Name="frame"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                OutlineColor="Accent"
+                AnchorX="0.5"
+                AnchorY="0.5">
+                <Label 
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="Welcome to Xamarin.Forms!"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    />
+            </Frame>
+
+            <Slider
+                x:Name="xSlider"
+                Minimum="-200"
+                Maximum="200"
+                Value="{Binding Source={x:Reference frame},
+                        Path=TranslationX}"/>
+            <Label
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference xSlider},
+                Path=Value, StringFormat='TranslatioX = {0:F0}'}"
+                HorizontalOptions="Center"/>
+
+
+            <Slider
+                x:Name="ySlider"
+                Minimum="-200"
+                Maximum="200"
+                Value="{Binding Source={x:Reference frame},
+                        Path=TranslationY}"/>
+            <Label
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference ySlider},
+                Path=Value, StringFormat='TranslatioY = {0:F0}'}"
+                HorizontalOptions="Center"/>
+
+            <Slider
+                x:Name="scaleSlider"
+                Minimum="-10"
+                Maximum="10"
+                Value="{Binding Source={x:Reference frame},
+                        Path=Scale}"/>
+            <Label
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference scaleSlider},
+                Path=Value, StringFormat='Scale = {0:F0}'}"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

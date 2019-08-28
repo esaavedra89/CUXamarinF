@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CUXamarin.AttachedProperty"
+             x:Class="CUXamarin.AttachedProperty.AttachedPropertyOther">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label 
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                local:OlderAttached.IsForOlderPeople="False"
+                x:Name="lblMainText"/>
+            <Entry
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                local:OlderAttached.IsForOlderPeople="True"
+                x:Name="entrySecondText"/>
+
+            <Button
+                Text="Test"
+                x:Name="btnIsAttached"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

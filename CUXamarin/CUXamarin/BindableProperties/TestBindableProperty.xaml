@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CUXamarin.BindableProperties"         
+    x:Class="CUXamarin.BindableProperties.TestBindableProperty">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                Text="{Binding Nombre}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            
+            <!--<local:HealthBox HealthStatus="{Binding Puntaje}"/>-->
+            <!--
+            x:Reference slider hago una referencia al Slider
+            value es propiedad de Slider que permite obtener el valor-->
+            <local:HealthBox 
+                HealthStatus="{Binding Source={x:Reference slider},
+                                       Path=Value}"/>
+
+            <Slider
+                x:Name="slider"
+                Minimum="0"
+                Maximum="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

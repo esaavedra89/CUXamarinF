@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CUXamarin.BindableProperties.Header">
+  <ContentView.Content>
+      <StackLayout>
+          <Label 
+              Text="Hello Xamarin.Forms!" 
+              FontAttributes="Bold"
+              FontSize="Large"
+              TextColor="Black"
+              x:Name="lblTitle"/>
+            <Label 
+              Text="Hello Xamarin.Forms!" 
+              FontAttributes="Italic"
+              FontSize="Medium"
+              TextColor="LightGray"
+              x:Name="lblSubTitle"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

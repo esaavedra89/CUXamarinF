@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CUXamarin.Topicos.Views.xArrayxType">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array 
+                Type="{x:Type x:String}"
+                x:Key="arreglo">
+                <x:String>Daniela</x:String>
+                <x:String>Tamara</x:String>
+                <x:String>Valle</x:String>
+                <x:String>Anileth</x:String>
+                <x:String>Milka</x:String>
+                <x:String>Papa</x:String>
+                <x:String>Jose</x:String>
+                <x:String>Yo</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView
+                ItemsSource="{x:StaticResource arreglo}">
+                
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

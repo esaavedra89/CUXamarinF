@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CUXamarin"
+             x:Class="CUXamarin.MainPage"
+             BackgroundColor="{x:Static local:WhiteTheme.BackgroundColor}">
+
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+        <Label
+            x:Name="lblTexto"
+            Text="Welcome"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="{x:Static local:WhiteTheme.ParagraphSize}"
+            FontAttributes="{x:Static local:WhiteTheme.QuoteStyle}"
+            TextColor="{x:Static local:WhiteTheme.FontColor}"/>
+        <!--<Label
+            x:Name="lblTexto"
+            Text="Welcome"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label.FontAttributes>
+                <x:StaticExtension Member="FontAttributes.Bold"/>
+            </Label.FontAttributes>
+            <Label.TextColor>
+                <x:StaticExtension Member="Color.Azure"/>
+            </Label.TextColor>
+        </Label>
+        --><!--Aqui hacemos lo mismo pero de forma mas simplificada--><!--
+        <Label
+            x:Name="lblTexto2"
+            Text="Welcome"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontAttributes="{Static Member=FontAttributes.Bold}"
+            TextColor="{Static Color.Azure}">
+        </Label>-->
+    </StackLayout>
+</ContentPage>
