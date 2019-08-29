@@ -57,6 +57,17 @@
                 Text="{Binding Source={x:Reference scaleSlider},
                 Path=Value, StringFormat='Scale = {0:F0}'}"
                 HorizontalOptions="Center"/>
+            <Slider
+                x:Name="rotationSlider"
+                Minimum="0"
+                Maximum="360"
+                Value="{Binding Source={x:Reference frame},
+                        Path=Rotation}"/>
+            <Label
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference rotationSlider},
+                Path=Value, StringFormat='Rotation = {0:F0}'}"
+                HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
