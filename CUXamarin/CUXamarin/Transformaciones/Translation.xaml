@@ -20,7 +20,7 @@
                     HorizontalOptions="CenterAndExpand"
                     />
             </Frame>
-
+            <!--Desplazar elemtno a los lados Translation X-->
             <Slider
                 x:Name="xSlider"
                 Minimum="-200"
@@ -33,7 +33,7 @@
                 Path=Value, StringFormat='TranslatioX = {0:F0}'}"
                 HorizontalOptions="Center"/>
 
-
+            <!--Desplazar elemento de arriba hacia abajo y viceversa Translation Y-->
             <Slider
                 x:Name="ySlider"
                 Minimum="-200"
@@ -45,7 +45,7 @@
                 Text="{Binding Source={x:Reference ySlider},
                 Path=Value, StringFormat='TranslatioY = {0:F0}'}"
                 HorizontalOptions="Center"/>
-
+            <!--Acercar o alejar un elemtno Scale-->
             <Slider
                 x:Name="scaleSlider"
                 Minimum="-10"
@@ -57,6 +57,7 @@
                 Text="{Binding Source={x:Reference scaleSlider},
                 Path=Value, StringFormat='Scale = {0:F0}'}"
                 HorizontalOptions="Center"/>
+            <!--Rotacion del frame-->
             <Slider
                 x:Name="rotationSlider"
                 Minimum="0"
@@ -67,6 +68,32 @@
                 FontAttributes="Bold"
                 Text="{Binding Source={x:Reference rotationSlider},
                 Path=Value, StringFormat='Rotation = {0:F0}'}"
+                HorizontalOptions="Center"/>
+
+            <!--Rotacion del frame en X-->
+            <Slider
+                x:Name="rotationXSlider"
+                Minimum="0"
+                Maximum="360"
+                Value="{Binding Source={x:Reference frame},
+                        Path=RotationX}"/>
+            <Label
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference rotationXSlider},
+                Path=Value, StringFormat='RotationX = {0:F0}'}"
+                HorizontalOptions="Center"/>
+
+            <!--Rotacion del frame en Y-->
+            <Slider
+                x:Name="rotationYSlider"
+                Minimum="0"
+                Maximum="360"
+                Value="{Binding Source={x:Reference frame},
+                        Path=RotationY}"/>
+            <Label
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference rotationYSlider},
+                Path=Value, StringFormat='RotationY = {0:F0}'}"
                 HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
