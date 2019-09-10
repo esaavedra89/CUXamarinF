@@ -15,7 +15,7 @@ namespace CUXamarin
 
             //MarkupExtensionDemo.Extensions.Extensions.Init();
 
-            MainPage = new Transformaciones.Translation();
+            MainPage = new AnimacionesDemo.AnimacionesSimples();
             //MainPage = new CUXamarin.BindableProperties.MainPage();
         }
 

@@ -186,4 +186,7 @@
       <Name>CUXamarin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Pokeball.png" />
+  </ItemGroup>
 </Project>
