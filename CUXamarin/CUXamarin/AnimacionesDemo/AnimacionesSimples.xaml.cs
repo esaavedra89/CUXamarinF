@@ -55,13 +55,30 @@ namespace CUXamarin.AnimacionesDemo
             //await image.RotateYTo(0,1000);
 
             //Fade
-            await image.FadeTo(1, 4000);
-            await image.FadeTo(0, 4000);
+            var cancelado = await image.FadeTo(1, 4000);
+            if (!cancelado)//Si no fue cancelado continua
+            {
+                await image.FadeTo(0, 4000);
+                SetIsEnableButtonState(true, false);
+            }
+            else
+            {//Si fue cancelado, lo regresa a su estado original
+                image.Opacity = 0;
+                SetIsEnableButtonState(true, false);
+            }
+            //await image.FadeTo(0, 4000);
 
         }
+        /// <summary>
+        /// Creado para cancelar la animacion en progreso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         async void OnCancelAnimationButtonClicked(object sender, EventArgs e)
         {
-
+            //Detiene la animacion
+            ViewExtensions.CancelAnimations(image);
+            SetIsEnableButtonState(true, false);
         }
     }
 }
