@@ -54,21 +54,48 @@ namespace CUXamarin.AnimacionesDemo
             //await image.RotateXTo(0,1000);
             //await image.RotateYTo(0,1000);
 
-            //Fade
-            var cancelado = await image.FadeTo(1, 4000);
-            if (!cancelado)//Si no fue cancelado continua
-            {
-                await image.FadeTo(0, 4000);
-                SetIsEnableButtonState(true, false);
-            }
-            else
-            {//Si fue cancelado, lo regresa a su estado original
-                image.Opacity = 0;
-                SetIsEnableButtonState(true, false);
-            }
-            //await image.FadeTo(0, 4000);
+            //Se probó la cancelacion de la animacion
 
+            //Fade
+            //var cancelado = await image.FadeTo(1, 4000);
+            //if (!cancelado)//Si no fue cancelado continua
+            //{
+            //    await image.FadeTo(0, 4000);
+            //    SetIsEnableButtonState(true, false);
+            //}
+            //else
+            //{//Si fue cancelado, lo regresa a su estado original
+            //    image.Opacity = 0;
+            //    SetIsEnableButtonState(true, false);
+            //}
+            ////await image.FadeTo(0, 4000);
+
+
+
+
+            //******************************************************************************///
+            //Ejecutando multiples animaciones
+
+            //Espera a que todos adentro terminen
+            //await Task.WhenAll<bool>
+            //    (
+            //        image.RotateTo(360,2000),
+            //        image.ScaleTo(5,1000)
+            //    );
+            //await image.ScaleTo(1, 1000);
+
+            //Espera hasta que cualquiera termine
+            await Task.WhenAny<bool>
+                (
+                    image.RotateTo(360, 2000),
+                    image.ScaleTo(5, 1000)
+                );
+            await image.ScaleTo(1, 1000);
         }
+
+
+
+
         /// <summary>
         /// Creado para cancelar la animacion en progreso
         /// </summary>
