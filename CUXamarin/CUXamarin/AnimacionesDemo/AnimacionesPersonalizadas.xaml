@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CUXamarin.AnimacionesDemo.AnimacionesPersonalizadas">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0,20,0,0">
+            <!--Opacity="0"-->
+            <Image
+                Source="Pokeball.png"
+                HeightRequest="100"
+                WidthRequest="100"
+                VerticalOptions="CenterAndExpand"
+                x:Name="image"
+                Opacity="1"/>
+            <Button
+                Text="Iniciar animación"
+                x:Name="startButton"
+                Clicked="OnStartAnimationButtonClicked"
+                VerticalOptions="End"/>
+            <Button
+                Text="Cancelar animación"
+                x:Name="cancelButton"
+                Clicked="OnCancelAnimationButtonClicked"
+                VerticalOptions="End"
+                IsEnabled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
