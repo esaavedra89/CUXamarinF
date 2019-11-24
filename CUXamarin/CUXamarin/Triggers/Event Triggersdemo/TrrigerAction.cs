@@ -7,6 +7,7 @@ namespace CUXamarin.Triggers.Event_Triggersdemo
         public Point Anchor { get; set; }
         public double Scale { get; set; }
         public int Length { get; set; }
+        [TypeConverter(typeof(EasingConverter))]
         public Easing EasingType { get; set; }
 
         public ScaleAction()
@@ -21,6 +22,7 @@ namespace CUXamarin.Triggers.Event_Triggersdemo
         {
             sender.AnchorX = Anchor.X;
             sender.AnchorY = Anchor.Y;
+            EasingType.ToString();
             sender.ScaleTo(Scale, (uint)Length, EasingType);
             //sender.ScaleTo(3.5);
         }

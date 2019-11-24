@@ -19,7 +19,7 @@
                         <local:ScaleAction
                             Anchor="0, 0.5"
                             Scale="1"
-                            EasingType="BounceOut"
+                            EasingType="Easing.BounceOut"
                             Length="2500"/>
                         <!--<local:DeScaleAction></local:DeScaleAction>-->
                     </EventTrigger>
