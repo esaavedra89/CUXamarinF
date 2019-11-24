@@ -1,20 +1,35 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace CUXamarin.Triggers.Event_Triggersdemo
 {
-    public class ScaleAction : TriggerAction<Entry>
+    public class ScaleAction : TriggerAction<VisualElement>
     {
-        protected override void Invoke(Entry sender)
+        public Point Anchor { get; set; }
+        public double Scale { get; set; }
+        public int Length { get; set; }
+        public Easing EasingType { get; set; }
+
+        public ScaleAction()
         {
-            sender.ScaleTo(3.5);
+            Anchor = new Point(0.5, 0.5);
+            Scale = 1;
+            Length = 250;
+            EasingType = Easing.Linear;
+        }
+
+        protected override void Invoke(VisualElement sender)
+        {
+            sender.AnchorX = Anchor.X;
+            sender.AnchorY = Anchor.Y;
+            sender.ScaleTo(Scale, (uint)Length, EasingType);
+            //sender.ScaleTo(3.5);
         }
     }
-    public class DeScaleAction : TriggerAction<Entry>
-    {
-        protected override void Invoke(Entry sender)
-        {
-            sender.ScaleTo(1);
-        }
-    }
+    //public class DeScaleAction : TriggerAction<VisualElement>
+    //{
+    //    protected override void Invoke(VisualElement sender)
+    //    {
+    //        sender.ScaleTo(1);
+    //    }
+    //}
 }

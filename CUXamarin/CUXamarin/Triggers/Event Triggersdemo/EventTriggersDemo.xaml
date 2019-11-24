@@ -9,10 +9,19 @@
                    AnchorX="0">
                 <Entry.Triggers>
                     <EventTrigger Event="Focused">
-                        <local:ScaleAction></local:ScaleAction>
+                        <local:ScaleAction
+                            Anchor="0, 0.5"
+                            Scale="20"
+                            EasingType="BounceIn"
+                            Length="2500"></local:ScaleAction>
                     </EventTrigger>
                     <EventTrigger Event="Unfocused">
-                        <local:DeScaleAction></local:DeScaleAction>
+                        <local:ScaleAction
+                            Anchor="0, 0.5"
+                            Scale="1"
+                            EasingType="BounceOut"
+                            Length="2500"/>
+                        <!--<local:DeScaleAction></local:DeScaleAction>-->
                     </EventTrigger>
                 </Entry.Triggers>
             </Entry>
