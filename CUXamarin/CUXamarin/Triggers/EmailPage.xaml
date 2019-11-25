@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CUXamarin.Triggers.Event_Triggersdemo"
+             x:Class="CUXamarin.Triggers.EmailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry
+                Placeholder="Email">
+                <Entry.Triggers>
+                    <EventTrigger Event="TextChanged">
+                        <local:EmailValidationAction/>
+                    </EventTrigger>
+                </Entry.Triggers>
+            </Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

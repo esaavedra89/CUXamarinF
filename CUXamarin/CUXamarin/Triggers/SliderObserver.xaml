@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CUXamarin.Triggers.SliderObserver">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="30">
+            <Label 
+                Text="Product Quantity"/>
+            <Slider Minimum="0"
+                    Maximum="10"
+                    x:Name="sldQuantity"/>
+            <Button Text="Order now!">
+                <Button.Triggers>
+                <DataTrigger TargetType="Button"
+                             Binding="{Binding Source={x:Reference sldQuantity}, 
+                            Path=Value}"
+                             Value="0">
+                    <Setter Property="IsEnabled"
+                            Value="False"/>
+                </DataTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
