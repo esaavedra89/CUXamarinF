@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CUXamarin.Triggers.ApprovedPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView
+                ItemsSource="{Binding Students}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.Triggers>
+                                    <DataTrigger TargetType="Grid"
+                                                 Binding="{Binding IsApproved}"
+                                                 Value="False">
+                                        <Setter Property="BackgroundColor"
+                                                Value="MediumVioletRed"/>
+                                    </DataTrigger>
+                                </Grid.Triggers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"
+                                       Text="{Binding Name}"/>
+                                <Label Grid.Column="1"
+                                       Text="{Binding Score}"
+                                       TextColor="DarkGreen">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label"
+                                                     Binding="{Binding IsApproved}"
+                                                     Value="False">
+                                            <Setter Property="TextColor"
+                                                    Value="DarkRed"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

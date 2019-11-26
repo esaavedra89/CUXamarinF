@@ -16,7 +16,7 @@ namespace CUXamarin
             //MarkupExtensionDemo.Extensions.Extensions.Init();
 
             //MainPage = new AnimacionesDemo.AnimacionesPersonalizadas();
-            MainPage = new CUXamarin.Triggers.SliderObserver();
+            MainPage = new CUXamarin.Triggers.ApprovedPage();
         }
 
         protected override void OnStart()
