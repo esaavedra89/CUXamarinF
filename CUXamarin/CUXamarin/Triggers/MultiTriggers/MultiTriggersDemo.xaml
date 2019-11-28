@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:CUXamarin.Triggers.MultiTriggers"
+             x:Class="CUXamarin.Triggers.MultiTriggers.MultiTriggersDemo">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:RequiredConverter x:Key="hasData"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout
+            Margin="30">
+            <Entry Margin="20,0"
+                   HeightRequest="40"
+                   Placeholder="UserName"
+                   Text=""
+                   x:Name="txtUser" />
+            <Entry Margin="20,0"
+                   IsPassword="True"
+                   HeightRequest="40"
+                   Placeholder="Password"
+                   Text=""
+                   x:Name="txtPassword" />
+            <Button IsEnabled="False"
+                    Text="Click Me!">
+                <Button.Triggers>
+                    <MultiTrigger TargetType="Button">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition 
+                                Binding="{Binding Source={x:Reference txtUser},
+                                Path=Text.Length,
+                                Converter={StaticResource hasData}}"
+                                Value="true"/>
+                            <BindingCondition 
+                                Binding="{Binding Source={x:Reference txtPassword},
+                                Path=Text.Length,
+                                Converter={StaticResource hasData}}"
+                                Value="true"/>
+                        </MultiTrigger.Conditions>
+                        <Setter Property="IsEnabled"
+                                Value="True"/>
+                    </MultiTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

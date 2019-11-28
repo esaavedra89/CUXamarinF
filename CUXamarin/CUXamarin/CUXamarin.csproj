@@ -75,6 +75,9 @@
     <EmbeddedResource Update="Triggers\Event Triggersdemo\EventTriggersDemo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Triggers\MultiTriggers\MultiTriggersDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Triggers\SliderObserver.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
