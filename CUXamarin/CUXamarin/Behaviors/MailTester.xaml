@@ -5,26 +5,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:CUXamarin.Behaviors"
              mc:Ignorable="d"
-             x:Class="CUXamarin.Behaviors.BehaviorDemo">
+             x:Class="CUXamarin.Behaviors.MailTester">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style TargetType="Entry">
-                <Style.Behaviors >
-                    <local:BasicBehavior/>
+            <!--<Style TargetType="Entry">
+                <Style.Behaviors>
+                    <local:EmailBehavior
+                        ErrorTextColor="DarkCyan"
+                        x:Name="isValidEmail"></local:EmailBehavior>
                 </Style.Behaviors>
-            </Style>
+            </Style>-->
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Entry Placeholder="Email:">
+            <Entry Placeholder="Email">
                 <Entry.Behaviors>
-                    <local:BasicBehavior/>
+                    <local:EmailBehavior
+                        ErrorTextColor="DarkCyan"
+                        x:Name="isValidEmail"></local:EmailBehavior>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Email:" TextColor="Blue"/>
-            <Entry Placeholder="Email:"/>
-            <Entry Placeholder="Email:"/>
+            <Button Text="Go To!"
+                    IsEnabled="{Binding Source={x:Reference isValidEmail},
+                Path=IsValid}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -16,7 +16,7 @@ namespace CUXamarin
             //MarkupExtensionDemo.Extensions.Extensions.Init();
 
             //MainPage = new AnimacionesDemo.AnimacionesPersonalizadas();
-            MainPage = new CUXamarin.Behaviors.BehaviorDemo();
+            MainPage = new CUXamarin.Behaviors.MailTester();
         }
 
         protected override void OnStart()
