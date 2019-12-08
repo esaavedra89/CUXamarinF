@@ -16,7 +16,7 @@ namespace CUXamarin
             //MarkupExtensionDemo.Extensions.Extensions.Init();
 
             //MainPage = new AnimacionesDemo.AnimacionesPersonalizadas();
-            MainPage = new CUXamarin.Triggers.MultiTriggers.MultiTriggersDemo();
+            MainPage = new CUXamarin.Behaviors.BehaviorDemo();
         }
 
         protected override void OnStart()
