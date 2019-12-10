@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,8 @@ namespace CUXamarin.Behaviors.BehaviorCommand
     public class BehaviorCommandViewModel
     {
         public Command SelecteditemCommand { get; set; }
+        public Command AcceptCommand { get; set; }
+        public Command CancelCommand { get; set; }
 
         public List<Person> People { get; set; }
 
@@ -58,6 +61,10 @@ namespace CUXamarin.Behaviors.BehaviorCommand
             };
 
             SelecteditemCommand = new Command(async (item) => await ShowData((Person)item));
+
+            AcceptCommand = new Command(() => Debug.WriteLine("HECHO"));
+
+            CancelCommand = new Command(() => Debug.WriteLine(" No HECHO"));
         }
 
         async Task ShowData(Person item)
