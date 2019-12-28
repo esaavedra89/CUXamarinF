@@ -34,5 +34,9 @@
     <string>CUXamarin</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+    <key>UIAppFont</key>
+    <Array>
+      <string>Sweety.ttf</string>
+    </Array>
 </dict>
 </plist>

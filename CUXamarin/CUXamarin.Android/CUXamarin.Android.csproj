@@ -76,6 +76,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Effects\FontEffect.cs" />
     <Compile Include="Effects\SelectAllEffect.cs" />
     <Compile Include="Effects\SimpleSliderEffect.cs" />
     <Compile Include="Effects\UnderLineEffect.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Sweety.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using CUXamarin.iOS.Effects;
-using Foundation;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -39,7 +35,7 @@ namespace CUXamarin.iOS.Effects
 
                 pEntry.PerformSelector(
                     new ObjCRuntime.Selector("selectAll"), null, 0.0f);
-            
+            }
         }
     }
 }

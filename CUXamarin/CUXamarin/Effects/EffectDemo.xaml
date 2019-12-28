@@ -33,6 +33,14 @@
                     <local:SelectAllEffect/>
                 </Entry.Effects>
             </Entry>
+
+            <Label 
+                FontSize="Large"
+                Text="Mi texto arrecho">
+                <Label.Effects>
+                    <local:FontEffect/>
+                </Label.Effects>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
