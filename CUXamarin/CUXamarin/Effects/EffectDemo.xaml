@@ -26,6 +26,13 @@
                     <local:UnderlineEffect/>
                 </Label.Effects>
             </Label>
+
+            <Entry
+                Text="Soy una prueba">
+                <Entry.Effects>
+                    <local:SelectAllEffect/>
+                </Entry.Effects>
+            </Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

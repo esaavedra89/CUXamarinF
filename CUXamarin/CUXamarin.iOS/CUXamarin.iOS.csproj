@@ -110,6 +110,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Effects\SelectAllEffect.cs" />
     <Compile Include="Effects\SimpleSliderEffect.cs" />
     <Compile Include="Effects\UnderLineEffect.cs" />
     <Compile Include="Main.cs" />
