@@ -15,19 +15,17 @@
                     <local:SliderEffect/>
                 </Slider.Effects>
             </Slider>
-            <Slider >
-                <Slider.Effects>
-                    <local:SliderEffect/>
-                </Slider.Effects>
-            </Slider>
-            <Slider >
-                <Slider.Effects>
-                    <local:SliderEffect/>
-                </Slider.Effects>
-            </Slider>
+            
             <Switch x:Name="switchEffects"
                     Toggled="switchEffects_Toggled"
                     IsToggled="True"/>
+            <Label 
+                FontAttributes="Bold"
+                Text="Texto subrayado">
+                <Label.Effects>
+                    <local:UnderlineEffect/>
+                </Label.Effects>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
