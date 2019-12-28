@@ -23,7 +23,10 @@ namespace CUXamarin.iOS.Effects
 
             var pLabel = Control as UILabel;
 
-            pLabel.Font = UIFont.FromName("Sweety.ttf", pLabel.Font.PointSize);
+            var fontFamily = CUXamarin.Effects.FontEffect.GetFontName(xLabel);
+
+            // $ de cadena interpolada.
+            pLabel.Font = UIFont.FromName($"{fontFamily}", pLabel.Font.PointSize);
         }
 
         protected override void OnDetached()

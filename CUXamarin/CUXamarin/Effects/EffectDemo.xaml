@@ -36,7 +36,16 @@
 
             <Label 
                 FontSize="Large"
-                Text="Mi texto arrecho">
+                Text="Mi texto arrecho"
+                local:FontEffect.FontName="Sweety">
+                <Label.Effects>
+                    <local:FontEffect/>
+                </Label.Effects>
+            </Label>
+            <Label 
+                FontSize="Large"
+                Text="Mi texto arrecho 2"
+                local:FontEffect.FontName="Sweeta">
                 <Label.Effects>
                     <local:FontEffect/>
                 </Label.Effects>

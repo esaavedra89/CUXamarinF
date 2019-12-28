@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Android.Graphics;
 using Android.Widget;
 using CUXamarin.Droid.Effects;
@@ -19,10 +20,13 @@ namespace CUXamarin.Droid.Effects
             }
 
             var pLabel = Control as TextView;
+            // De prueba para ver si esta viniendo el texto que le pasamos por el Xaml.
+            var fontFamily = CUXamarin.Effects.FontEffect.GetFontName(xLabel);
+            Debug.WriteLine(fontFamily);
 
             var font =
                 Typeface.CreateFromAsset(Android.App.Application.Context.Assets,
-                "Sweety.ttf");
+                $"{fontFamily}.ttf");
 
             pLabel.Typeface = font;
         }

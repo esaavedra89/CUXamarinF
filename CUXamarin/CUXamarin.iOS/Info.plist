@@ -36,7 +36,11 @@
     <string>Assets.xcassets/AppIcon.appiconset</string>
     <key>UIAppFont</key>
     <Array>
-      <string>Sweety.ttf</string>
+      <string>Sweeta.ttf</string>
     </Array>
+  <key>UIAppFont</key>
+  <Array>
+    <string>Sweety.ttf</string>
+  </Array>  
 </dict>
 </plist>
