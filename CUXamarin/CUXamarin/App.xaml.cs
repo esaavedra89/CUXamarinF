@@ -16,7 +16,7 @@ namespace CUXamarin
             //MarkupExtensionDemo.Extensions.Extensions.Init();
 
             //MainPage = new AnimacionesDemo.AnimacionesPersonalizadas();
-            MainPage = new CUXamarin.Effects.EffectDemo();
+            MainPage = new CUXamarin.CustomRenderers.SetCustomEntry();
         }
 
         protected override void OnStart()
