@@ -81,6 +81,7 @@
     <Compile Include="Effects\SimpleSliderEffect.cs" />
     <Compile Include="Effects\UnderLineEffect.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\GradientButtonRenderer.cs" />
     <Compile Include="Renderers\MyEntryRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
